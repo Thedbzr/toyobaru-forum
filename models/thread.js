@@ -20,7 +20,7 @@ const postsSchema = new Schema({
 const threadSchema = new Schema({
     topic: {
         type: String,
-        enum: ['Generals', 'Engine', 'Forced Induction', 'Wheels/Tires', 'Suspension', 'Cosmetic'],
+        enum: ['General', 'Engine', 'ForcedInduction', 'WheelsTires', 'Suspension', 'Cosmetic'],
         required: true
     },
     title: {
@@ -37,10 +37,4 @@ const threadSchema = new Schema({
     timestamps: true
 })
 
-const topicSchema = new Schema({
-    threads: [threadSchema]
-}, {
-    timestamps: true
-})
-
-module.exports = mongoose.model('Topics', topicSchema);
+module.exports = mongoose.model('Thread', threadSchema);

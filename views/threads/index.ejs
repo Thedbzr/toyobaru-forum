@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><%= topic %></title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="topics"><%= topic %></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><h1>Threads for Topic</h1></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <%- include('../partials/footer') %>

@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const topicsCtrl = require('../controllers/topics');
+const threadsCtrl = require('../controllers/threads');
 const isLoggedIn = require('../config/auth');
 
-//display topics
-router.get('/', topicsCtrl.index);
-
+router.get('/topics/:id/threads', threadsCtrl.index);
 
 
 module.exports = router;
