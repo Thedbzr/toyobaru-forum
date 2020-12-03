@@ -6,6 +6,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 34px;
+  margin-top: 0;
 }
 
 .login img {
@@ -70,4 +71,10 @@ body > main {
 
 body > main h1:first-child {
   margin-bottom: 50px;
+}
+.topics {
+  text-align: center;
+}
+.blockBtn {
+  width: 100%;
 }

@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Topics</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="topics">Topics</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="topics"><button class="blockBtn" name="topic" value="general" >General</button></td>
+            </tr>
+            <tr>
+                <td class="topics"><button class="blockBtn" name="topic" value="engine">Engine</button></td>
+            </tr>
+            <tr>
+                <td class="topics"><button class="blockBtn" name="topic" value="forced induction">Forced Induction</button></td>
+            </tr>
+            <tr>
+                <td class="topics"><button class="blockBtn" name="topic" value="wheels/tires">Wheels/Tires</button></td>
+            </tr>
+            <tr>
+                <td class="topics"><button class="blockBtn" name="topic" value="suspension">Suspension</button></td>
+            </tr>
+            <tr>
+                <td class="topics"><button class="blockBtn" name="topic" value="cosmetic">Cosmetic</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <%- include('../partials/footer') %>
