@@ -14,9 +14,7 @@ function index(req,res){
 }
 
 function newThread(req,res){
-    res.render('threads/new',{
-        id: req.params.id
-    });
+    res.render('threads/new');
 }
 
 function create(req,res){
@@ -26,7 +24,7 @@ function create(req,res){
     console.log(req.params.id);
     const thread = new Thread(req.body);
     thread.save(function (err){ 
-        if(err) return res.render('topics/index');
+        if(err) return console.log(err.message);
         console.log(thread);
         res.redirect(`/topics/${req.params.id}/threads`);
     })
