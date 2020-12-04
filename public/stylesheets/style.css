@@ -83,3 +83,6 @@ body > main h1:first-child {
 .newThread{
   display: block;
 }
+.threadForm{
+  margin-bottom: 10vmin;
+}

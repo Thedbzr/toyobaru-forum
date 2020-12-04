@@ -11,7 +11,7 @@ const postsSchema = new Schema({
         type: String,
         required: true
     },
-    likes: []
+    likes: [{type: Schema.Types.ObjectId, ref: 'User'}]
 
 }, {
     timestamps: true
@@ -20,7 +20,7 @@ const postsSchema = new Schema({
 const threadSchema = new Schema({
     topic: {
         type: String,
-        enum: ['General', 'Engine', 'ForcedInduction', 'WheelsTires', 'Suspension', 'Cosmetic'],
+        enum: ['general', 'engine', 'forcedInduction', 'wheelsTires', 'suspension', 'cosmetic'],
         required: true
     },
     title: {

@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <form class="threadForm" action="/topics/<%= topic %>/threads" method="POST">
+        <input type="text" placeholder="Title" name="title">
+        <textarea placeholder="Content" name="content"></textarea>
+        <input type="submit" value="Submit">
+    </form>
     <table>
         <thead>
             <tr>
@@ -20,20 +25,21 @@
             </tr>
         </thead>
         <tbody>
-            <form>
                 <tr>
                     <td>Engine Running Strong Post Recall</td>
                     <td>November 21, 2020</td>
                     <td>8714</td>
                     <td>131</td>
                 </tr>
-            </form>
+                <% threads.forEach(function(t){ %>
+                    <tr>
+                        <td><a href="/topics/<%= topic %>/threads/<%= t._id %>"><%= t.title %></a></td>
+                        <td><%= t.createdAt %></td>
+                        <td>2435</td>
+                        <td><%= t.posts %></td>
+                    </tr>
+                <% }) %>
         </tbody>
     </table>
-    <form action="/topics/<%= topic %>/threads" method="POST">
-        <input type="text" placeholder="Title" name="title">
-        <textarea placeholder="Content" name="content"></textarea>
-        <input type="submit" value="Submit">
-    </form>
 
     <%- include('../partials/footer') %>
