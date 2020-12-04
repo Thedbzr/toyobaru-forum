@@ -24,7 +24,12 @@ const threadSchema = new Schema({
         required: true
     },
     title: {
-        type: String
+        type: String,
+        required: true
+    },
+    content: {
+        type: String,
+        required: true
     },
     user: {
         type: Schema.Types.ObjectId, ref: 'User'

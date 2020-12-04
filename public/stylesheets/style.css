@@ -6,7 +6,6 @@ a {
   justify-content: center;
   align-items: center;
   height: 34px;
-  margin-top: 0;
 }
 
 .login img {
@@ -75,14 +74,12 @@ body > main h1:first-child {
 .topics {
   text-align: center;
 }
-/* .blockBtn {
-  text-decoration: none; font: menu;
-  display: inline-block; padding: 2px 8px;
-  background: ButtonFace; color: ButtonText;
-  border-style: solid; border-width: 2px;
-  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
-  width: 100%;
-} */
 .waves-effect{
   width: 100%;
+}
+.topicDropDwn {
+  display: inline;
+}
+.newThread{
+  display: block;
 }
