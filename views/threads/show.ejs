@@ -24,11 +24,55 @@
                 <td><%= thread.title %></td>
                 <td><%= thread.content%></td>
                 <td><%= thread.createdAt %></td>
-                <td>245</td>
-                <td><%= thread.posts %></td>
+                <td><%= thread.views %></td>
             </tr>
 
         </tbody>
     </table>
+    <br><br>
+    <h2>Replies</h2>
+    <% if (user) { %>
+    <form id="add-post-form" method="POST" action="/threads/<%= thread._id %>/posts">
+        <label>Post:</label>
+        <textarea name="content"></textarea>
+        <input type="submit" value="Add Post">
+    </form>
+    <% } %>
+    <% if (thread.posts.length) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>userAvatar</th>
+                <th>userName</th>
+                <th>content</th>
+                <th>Likes</th>
+                <th>createdAt</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% thread.posts.forEach(function(p) { %>
+            <tr>
+                <td><img src="<%= p.userAvatar %>" alt="Avatar"></td>
+                <td><%= p.userName %></td>
+                <td><%= p.content %></td>
+                <td><%= p.likes %></td>
+                <td><%= p.createdAt.toLocaleDateString() %></td>
+                <td>
+                    <% if (user && user._id.equals(p.user)) { %>
+                    <form action="/posts/<%= p._id %>?_method=DELETE"
+                        method="POST">
+                        <button type="submit">X</button>
+                    </form>
+                    <% } %>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <h5>No Posts Yet</h5>
+    <% } %>
 
-    <%- include('../partials/footer') %>
+</body>
+<%- include('../partials/footer') %>

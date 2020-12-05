@@ -5,12 +5,10 @@ const isLoggedIn = require('../config/auth');
 
 //Get all threads for specific topic
 router.get('/topics/:id/threads', threadsCtrl.index);
-// GET /topics/id/threads/new (show a form to enter a new thread data)
-router.get('/topics/threads/new', threadsCtrl.new);
 // POST /topics/:id/threads (create a student using the submitted form data)
 router.post('/topics/:id/threads', threadsCtrl.create);
 //GET single thread
-router.get('/topics/:id/threads/:id', threadsCtrl.show);
+router.get('/threads/:id', threadsCtrl.show);
 
 
 module.exports = router;

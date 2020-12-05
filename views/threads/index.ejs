@@ -28,15 +28,15 @@
                 <tr>
                     <td>Engine Running Strong Post Recall</td>
                     <td>November 21, 2020</td>
-                    <td>8714</td>
+                    <td>8271</td>
                     <td>131</td>
                 </tr>
                 <% threads.forEach(function(t){ %>
                     <tr>
-                        <td><a href="/topics/<%= topic %>/threads/<%= t._id %>"><%= t.title %></a></td>
+                        <td><a href="/threads/<%= t._id %>"><%= t.title %></a></td>
                         <td><%= t.createdAt %></td>
-                        <td>2435</td>
-                        <td><%= t.posts %></td>
+                        <td><%= t.views %></td>
+                        <td><%= t.posts.length %></td>
                     </tr>
                 <% }) %>
         </tbody>

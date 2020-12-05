@@ -35,7 +35,8 @@ const threadSchema = new Schema({
         type: Schema.Types.ObjectId, ref: 'User'
     },
     views: {
-        type: Number
+        type: Number,
+        default: 0
     },
     posts: [postsSchema]
 }, {
