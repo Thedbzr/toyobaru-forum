@@ -107,3 +107,6 @@ body > main h1:first-child {
   border-radius: 50%;
   height: 40px;
 }
+* img {
+  border-radius: 12px;
+}
