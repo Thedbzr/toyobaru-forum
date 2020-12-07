@@ -23,7 +23,7 @@
             <tr>
                 <td><%= thread.title %></td>
                 <td><%= thread.content%></td>
-                <td><%= thread.createdAt %></td>
+                <td><%= thread.createdAt.toLocaleDateString()  %></td>
                 <td><%= thread.views %></td>
             </tr>
 

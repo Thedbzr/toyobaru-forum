@@ -1,13 +1,8 @@
-<%- include('../partials/header') %>
-<html>
+<%- include('./partials/header') %>
+<% if(user) { %>
+    <h1>Congrats You're Logged In</h1>
+<% } else { %>
+<h1>Welcome! Please Login To Continue</h1>
+<% } %>
 
-<head>
-  <title><%= title %></title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-
-<body>
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
-  
-<%- include('../partials/footer') %>
+<%- include('./partials/footer') %>

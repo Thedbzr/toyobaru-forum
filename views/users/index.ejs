@@ -1,8 +1,28 @@
 <%- include('../partials/header') %>
 <% if(user) { %>
-    <h1>Congrats You're Logged In</h1>
+<h1>Community List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>UserName</th>
+            <th>Drives</th>
+            <th>Joined</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(function(u){ %>
+        <tr>
+            <td><img src="<%= u.avatar %>" alt="Avatar"></td>
+            <td><%= u.name %></td>
+            <td><%= u.vehicles %></td>
+            <td><%= u.createdAt.toLocaleDateString() %></td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
 <% } else { %>
-<h1>Welcome! Please Login To Continue</h1>
+<h1>Need to Log in</h1>
 <% } %>
 
 <%- include('../partials/footer') %>

@@ -8,7 +8,15 @@ const userSchema = new Schema({
     required: true
   },
   email: String,
-  avatar: String
+  avatar: String,
+  vehicles: {
+    type: [],
+    default: ['Unknown']
+  },
+  bio: {
+    type: String,
+    default: ''
+  }
 }, {
   timestamps: true
 });
