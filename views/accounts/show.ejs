@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Account</title>
+</head>
+<% if(user) { %>
+<h1>Edit Profile</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Avatar</th>
+            <th>UserName</th>
+            <th>Drive</th>
+            <th>Instagram Handle</th>
+            <th>Bio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <form action="/accounts?_method=PUT" method="POST">
+            <tr>
+                <td><img src="<%= user.avatar %>" alt="Avatar"></td>
+                <td>
+                    <input name="name">
+                </td>
+                <td><input name="vehicles"></td>
+                <td><input name="instagram"></td>
+                <td><Textarea name="bio"></Textarea></td>
+            </tr>
+        </tbody>
+    </table>
+    <button>Submit</button>
+</form>
+<% } else { %>
+<h1>Need to Log in</h1>
+<% } %>
+
+<%- include('../partials/footer') %>

@@ -10,10 +10,14 @@ const userSchema = new Schema({
   email: String,
   avatar: String,
   vehicles: {
-    type: [],
-    default: ['Unknown']
+    type: String,
+    default: 'N/A'
   },
   bio: {
+    type: String,
+    default: ''
+  },
+  instagram: {
     type: String,
     default: ''
   }

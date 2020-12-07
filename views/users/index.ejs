@@ -7,6 +7,7 @@
             <th>User</th>
             <th>UserName</th>
             <th>Drives</th>
+            <th>Bio</th>
             <th>Joined</th>
         </tr>
     </thead>
@@ -17,6 +18,7 @@
             <td><%= u.name %></td>
             <td><%= u.vehicles %></td>
             <td><%= u.createdAt.toLocaleDateString() %></td>
+            <td><%= u.bio %></td>
         </tr>
         <% }) %>
     </tbody>

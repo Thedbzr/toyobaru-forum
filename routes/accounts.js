@@ -3,7 +3,7 @@ const router = express.Router();
 const accountsCtrl = require('../controllers/accounts');
 const isLoggedIn = require('../config/auth');
 
-router.get('/accounts/:id', accountsCtrl.show);
-// router.put('/accounts/:id', accountsCtrl.update);
+router.get('/accounts', accountsCtrl.show);
+router.put('/accounts', accountsCtrl.update);
 
 module.exports = router;
