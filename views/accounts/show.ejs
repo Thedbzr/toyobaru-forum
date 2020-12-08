@@ -9,31 +9,28 @@
 </head>
 <% if(user) { %>
 <h1>Edit Profile</h1>
-<table>
-    <thead>
-        <tr>
-            <th>Avatar</th>
-            <th>UserName</th>
-            <th>Drive</th>
-            <th>Instagram Handle</th>
-            <th>Bio</th>
-        </tr>
-    </thead>
-    <tbody>
-        <form action="/accounts?_method=PUT" method="POST">
-            <tr>
-                <td><img src="<%= user.avatar %>" alt="Avatar"></td>
-                <td>
-                    <input name="name">
-                </td>
-                <td><input name="vehicles"></td>
-                <td><input name="instagram"></td>
-                <td><Textarea name="bio"></Textarea></td>
-            </tr>
-        </tbody>
-    </table>
-    <button>Submit</button>
-</form>
+<hr>
+<form action="/accounts?_method=PUT" method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">UserName</label>
+        <input type="text" class="form-control" id="name" name="name"placeholder="UserName">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="instagram">Instagram Handle</label>
+        <input type="text" class="form-control" id="instagram" name="instagram" placeholder="instagram">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="vehicles">Drive</label>
+      <input type="text" class="form-control" id="drive" name="vehicles" placeholder="BRZ/FRS/86">
+    </div>
+    <div class="form-group">
+      <label for="bio">Bio</label>
+      <textarea type="text" class="form-control" id="bio" name="bio" placeholder="Bio"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
 <% } else { %>
 <h1>Need to Log in</h1>
 <% } %>
