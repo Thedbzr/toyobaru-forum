@@ -228,3 +228,10 @@ block-size: fit-content;
 * {
   font-family: 'Russo One', sans-serif;
 }
+* table {
+  width: 100vw;
+}
+.communityTable > tbody > tr {
+  border: white 2vmin solid;
+  border-radius: 12px;
+}

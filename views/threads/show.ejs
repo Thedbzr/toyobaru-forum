@@ -48,7 +48,6 @@
                 <th>userAvatar</th>
                 <th>userName</th>
                 <th>content</th>
-                <th>Likes</th>
                 <th>createdAt</th>
                 <th>Edit</th>
             </tr>
@@ -59,7 +58,6 @@
                 <td><img src="<%= p.userAvatar %>" alt="Avatar"></td>
                 <td><%= p.userName %></td>
                 <td><%= p.content %></td>
-                <td><%= p.likes %></td>
                 <td><%= p.createdAt.toLocaleDateString() %></td>
                 <td>
                     <% if (user && user._id.equals(p.user)) { %>

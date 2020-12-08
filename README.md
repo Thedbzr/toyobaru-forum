@@ -41,6 +41,15 @@ Below is a short review via DSF of why these cars have a huge following.
 * [Mongodb](https://www.mongodb.com/)
 * [Bootstrap](https://getbootstrap.com/)
 
+
+<!-- NEXT STEPS -->
+## Next Steps
+A collection of Icebox Features to be added.
+* Update Styling
+* Add Parallax for Landing Page
+* add Post Like Feature
+* Integrate Text-to-Speech API
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
