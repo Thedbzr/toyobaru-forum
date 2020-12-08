@@ -148,7 +148,7 @@ main #slides {
 }
 .centerHero {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   color: white;
   transform: translate(-50%, -50%);
@@ -224,4 +224,7 @@ block-size: fit-content;
 }
 .container {
   display: contents;
+}
+* {
+  font-family: 'Russo One', sans-serif;
 }
