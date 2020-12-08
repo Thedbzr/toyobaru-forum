@@ -11,9 +11,11 @@
     <a href="https://toyobaru-forum.herokuapp.com/">View Demo</a>
   </p>
 </p>
+
 <!-- Description -->
 ## Description
 **Toyobaru**
+
 A Car Forum for all Subaru BRZ/ Scion FRS / Toyota 86 owners.
 Threads are sorted by Topics and Users can sign up via google , create new threads , comment on threads, see all users, as well as update their profile.
 The Name of this forum comes from the nickname given to these cars that were jointly developed by Toyota and Subaru - The Toyobaru Twins.
@@ -26,6 +28,7 @@ Below is a short review via DSF of why these cars have a huge following.
 
 ![HomePage](https://i.imgur.com/106TFJ6.png)
 ![Topics](https://i.imgur.com/hbft8kW.png)
+![Threads](https://i.imgur.com/D6Q3vdH.png)
 
 
 ### Built With/Technologies Used
