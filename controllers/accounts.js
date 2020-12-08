@@ -16,6 +16,6 @@ function update(req, res) {
     }, {})
     Object.assign(req.user, req.body);
     req.user.save(function (err) {
-        res.redirect(`/accounts`);
+        res.redirect(`/users`);
     })
 }
