@@ -4,7 +4,7 @@ const topicsCtrl = require('../controllers/topics');
 const isLoggedIn = require('../config/auth');
 
 //display topics
-router.get('/', topicsCtrl.index);
+router.get('/', isLoggedIn, topicsCtrl.index);
 
 
 
