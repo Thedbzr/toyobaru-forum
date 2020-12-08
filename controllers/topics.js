@@ -3,5 +3,5 @@ module.exports = {
 }
 
 function index(req, res) {
-      res.render('topics/index', { title: 'All Topics'});
+      res.render('topics/index', { title: 'Topics'});
   }

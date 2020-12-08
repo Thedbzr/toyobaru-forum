@@ -7,6 +7,6 @@ module.exports = {
 function index(req, res) {
   User.find({} , function(err, users){
     console.log(users);
-    res.render('users/index', { title: 'Toyobaru', users});
+    res.render('users/index', { title: 'Community', users});
   });
 }

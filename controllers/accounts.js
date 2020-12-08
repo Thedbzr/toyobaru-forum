@@ -6,7 +6,7 @@ module.exports = {
 };
 
 function show(req, res) {
-    res.render('accounts/show', { user: req.user });
+    res.render('accounts/show', { title: 'Account', user: req.user });
 }
 
 function update(req, res) {

@@ -9,7 +9,7 @@ module.exports = {
 
 function index(req,res){
     Thread.find({topic: req.params.id}, function(err, threads){
-        res.render('threads/index', {threads, topic: req.params.id} )
+        res.render('threads/index', {title: 'Topics',threads, topic: req.params.id} )
     })
     
 }
@@ -33,7 +33,7 @@ function show(req,res){
         thread.views++;
         thread.save(function(err){
             if(err) console.log(err);
-            res.render('threads/show', {thread});
+            res.render('threads/show', {title: 'Topics',thread});
         })
     })
 }
