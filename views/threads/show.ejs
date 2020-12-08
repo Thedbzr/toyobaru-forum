@@ -49,7 +49,9 @@
                 <th>userName</th>
                 <th>content</th>
                 <th>createdAt</th>
+                <% if (user && user._id.equals(thread.posts.user)) { %>
                 <th>Edit</th>
+                <% } %>
             </tr>
         </thead>
         <tbody>
