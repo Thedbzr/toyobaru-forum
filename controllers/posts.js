@@ -2,8 +2,28 @@ const Thread = require('../models/thread');
 
 module.exports = {
     create,
+    update,
     delete: deletePost
 };
+
+function update(req,res){
+    Thread.findOne({'posts._id': req.params.id}).then(function(thread){
+        //find subdoc using id method on mongoose
+        const post = thread.posts.id(req.params.id);
+        //ensure post was created by the logged in user
+        if (!post.user.equals(req.user._id)) return res.redirect(`/threads/${thread._id}`);
+        //edit post
+        Object.assign(post, req.body)
+        //save the updated Thread
+        thread.save().then(function () {
+            //redirect back to the thread show view
+            res.redirect(`/threads/${thread._id}`);
+        }).catch(function (err) {
+            //Display express error
+            return next(err);
+        });
+    })
+}
 
 function create(req, res) {
     //find the thread to embed the post within
@@ -20,13 +40,6 @@ function create(req, res) {
         });
     });
 }
-
-// Model.find().count(function(err, count){
-//     console.log("Number of docs: ", count );
-// });
-
-
-
 
 
 function deletePost(req, res, next) {

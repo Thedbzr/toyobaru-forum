@@ -110,3 +110,7 @@ body > main h1:first-child {
 * img {
   border-radius: 12px;
 }
+.postBtns {
+  display: flex;
+  justify-content: flex-end;
+}

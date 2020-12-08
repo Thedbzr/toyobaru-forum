@@ -48,7 +48,7 @@
                 <th>content</th>
                 <th>Likes</th>
                 <th>createdAt</th>
-                <th>delete</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -61,10 +61,16 @@
                 <td><%= p.createdAt.toLocaleDateString() %></td>
                 <td>
                     <% if (user && user._id.equals(p.user)) { %>
-                    <form action="/posts/<%= p._id %>?_method=DELETE"
-                        method="POST">
-                        <button type="submit">X</button>
+                    <form action="/posts/<%= p._id %>?_method=PUT" method="POST">
+                        <textarea name="content"></textarea>
+                        <br>
+                        <div class="postBtns">
+                            <button type="submit">Edit</button>
                     </form>
+                    <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                    </div>
                     <% } %>
                 </td>
             </tr>
