@@ -17,7 +17,7 @@
 **Toyobaru**
 
 A Car Forum for all Subaru BRZ/ Scion FRS / Toyota 86 owners.
-Threads are sorted by Topics and Users can sign up via google , create new threads , comment on threads, see all users, as well as update their profile.
+Threads are sorted by Topics and Users can sign up via google, create new threads, comment on threads, see all users, as well as update their profile.
 The Name of this forum comes from the nickname given to these cars that were jointly developed by Toyota and Subaru - The Toyobaru Twins.
 Below is a short review via DSF of why these cars have a huge following.
 > For the price of a base spec Civic, you get to experience the true joy of driving. If you really want to relieve your financial conscience, think of it as getting a car that’s nearly the same as the one still sold new today for half the price. Besides, with its smiling face staring up at you every time you walk away from it, the Toyota GT86/Subaru BRZ will just make you want to take it out again for another drive.
