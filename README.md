@@ -52,6 +52,8 @@ A collection of Icebox Features to be added.
 
 <!-- GETTING STARTED -->
 ## Getting Started
+* [Demo Link - Toyobaru](https://toyobaru-forum.herokuapp.com/)
+* [Trello Board Planning](https://trello.com/anthonymartinez72/boards)
 
 To get a local copy up and running follow these simple steps.
 
